@@ -1,20 +1,15 @@
 import 'package:flutter/material.dart';
-import 'HomePage.dart';
+import './home_screen.dart';
+import './tabs_screen.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
+class OpeningScreen extends StatelessWidget {
+  static const routeName = '/';
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: MyHomePage(),
-        routes: {
-          '/HomePage': (context) => HomePage(),
-        });
+    return MaterialApp(home: MyHomePage(), routes: {
+      '/HomePage': (context) => TabsScreen(),
+    });
   }
 }
 

@@ -3,6 +3,7 @@ import './screens/tabs_screen.dart';
 import './screens/roadmap_details_screen.dart';
 import './screens/category_roadmaps_screen.dart';
 import './screens/categories_screen.dart';
+import './screens/opening_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,6 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'insight',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.pink,
         accentColor: Colors.amber,
@@ -32,7 +34,7 @@ class MyApp extends StatelessWidget {
       // home: CategoriesScreen(),
       initialRoute: '/', // default is '/'
       routes: {
-        '/': (ctx) => TabsScreen(),
+        OpeningScreen.routeName: (ctx) => OpeningScreen(),
         CategoryRoadmapsScreen.routeName: (ctx) => CategoryRoadmapsScreen(),
         RoadmapDetailsScreen.routeName: (ctx) => RoadmapDetailsScreen(),
       },
